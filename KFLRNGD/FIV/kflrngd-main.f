@@ -30,12 +30,8 @@ C     IMPLICIT DOUBLE PRECISION (A)
       COMMON /RSTATE/ RANX(100)
       EXTERNAL RNFARR, RNFSTR, RNSPRN, RNAPRT
 
-
- 42   FORMAT (' A(1) = ', F22.20)
- 43   FORMAT (A)
- 44   FORMAT (A, F22.20) 
-
-      WRITE (6, 43) ' KFLRNGD simple test.'
+      WRITE (6, 101)
+ 101  FORMAT (' KFLRNGD simple test.')
 
       CALL RNFSTR(310952)
       
@@ -49,8 +45,10 @@ C     0.36410514377569680455 and
 C     0.40565695769206500110
 C     On MVS 3.8j FORTRAN IV with Hex floats .36410514377569680000
 
-      WRITE (6, 44) ' (a) RANX(1) = ', RANX(1)
-      WRITE (6, 44) ' (a)    A(1) = ', A(1)
+      WRITE (6, 102) RANX(1)
+ 102  FORMAT (' (a) RANX(1) = ', F22.20)
+      WRITE (6, 103) A(1)
+ 103  FORMAT (' (a)    A(1) = ', F22.20)
 
 C     Repeat with 2009 and 1009 bounds switched.
 
@@ -65,8 +63,10 @@ C     0.36410514377569680455 and
 C     0.04731923453148767500
 C     On MVS 3.8j FORTRAN IV with Hex floats .36410514377569680000 
 
-      WRITE (6, 44) ' (b) RANX(1) = ', RANX(1)
-      WRITE (6, 44) ' (b)    A(1) = ', A(1)
+      WRITE (6, 104) RANX(1)
+ 104  FORMAT (' (b) RANX(1) = ', F22.20)
+      WRITE (6, 105) A(1)
+ 105  FORMAT (' (b)    A(1) = ', F22.20)
 
       STOP
 C     end of file on next card/line -- kflrngd-main.f
