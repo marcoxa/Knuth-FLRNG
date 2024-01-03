@@ -25,7 +25,7 @@ C     Fortran H compiler on MVS 3.8j (yep: ancient stuff).
 C     
       INTEGER FUNCTION KRNNXT(I)
       INTEGER RANNXT, QUAL
-      DOUBlE PRECISION RANBUF
+      DOUBLE PRECISION RANBUF
       COMMON /RNGNXT/ RANBUF(1009), RANNXT, QUAL
 C     PARAMETER (QUAL = 1009)
 C
