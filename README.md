@@ -38,6 +38,14 @@ The build tools will build the `kflrng[di]-main` and
 `kflrng[di]-nrandom` exectutables for you to test.
 
 
+### JCL for MVS 3.8j
+
+The subfolders for **Fortran IV (66)** (named `FIV`) contain **JCL**
+to compile *load modules* on **MVS 3.8j**.  (Not yet for the `KFLRNGI`
+subfolder; but it should be straighforward to reuse the **JCL** for
+`KFLRNGD`).
+
+
 ## Usage
 
 You can link in your code the object files obtained from
@@ -53,7 +61,7 @@ In order to get the *next* pseudo-random number you invoke the
 ## Notes
 
 The various versions (`INTEGER`, `DOUBLE PRECISION`, **Fortran 77**,
-and **Fortran IV**) contain code duplications, but in they are
+and **Fortran IV**) contain code duplications, but they are
 self-contained.
 
 I am not much of a Fortran programmer; apart from Knuth's code, which
@@ -63,6 +71,6 @@ I welcome suggestions.
 
 # Enjoy
 
-2023-12-27, Athens, Greece
+2024-01-04, Athens, Greece
 
 Enjoy
